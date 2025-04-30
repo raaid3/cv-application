@@ -4,7 +4,7 @@ import CVPreview from "./CVPreview.tsx";
 
 export default function Form() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-light-primary dark:bg-dark-bg py-20">
       <GeneralInfoForm />
     </div>
   );
@@ -58,9 +58,9 @@ function GeneralInfoForm() {
   return isSubmitted ? (
     <CVPreview formData={formData} editEventHandler={edit} />
   ) : (
-    <div className="p-4 min-w-lg mx-auto bg-gray-100 rounded-lg shadow-md">
+    <div className="p-6 min-w-3xl mx-auto bg-white dark:bg-dark-surface rounded-lg shadow-lg transition-all">
       <form onSubmit={handleSubmit}>
-        <h2 className="text-xl font-bold mb-4 text-gray-800">
+        <h2 className="text-2xl font-bold mb-6 text-black dark:text-dark-font">
           General Information
         </h2>
         <TextInput
@@ -82,7 +82,7 @@ function GeneralInfoForm() {
           val={formData.general.phone}
         />
 
-        <h2 className="text-xl font-bold mb-4 text-gray-800">
+        <h2 className="text-2xl font-bold mb-6 text-black dark:text-dark-font">
           Educational Experience
         </h2>
         <TextInput
@@ -104,7 +104,7 @@ function GeneralInfoForm() {
           val={formData.education.graduationYear}
         />
 
-        <h2 className="text-xl font-bold mb-4 text-gray-800">
+        <h2 className="text-2xl font-bold mb-6 text-black dark:text-dark-font">
           Practical Experience
         </h2>
         <TextInput
@@ -127,7 +127,7 @@ function GeneralInfoForm() {
         />
 
         <button
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
+          className="mt-6 px-3 py-2 bg-blue-400 text-gray-900 font-semibold rounded-lg shadow-md hover:bg-blue-500 ease-in-out duration-300 hover:scale-110 active:scale-100"
           type="submit"
         >
           Submit Form

@@ -13,7 +13,7 @@ export default function TextInput({
     <div className="mb-4">
       <label
         htmlFor={labelName}
-        className="block text-sm font-medium text-gray-700 mb-1"
+        className="block text-sm font-medium text-black mb-1 dark:text-dark-font"
       >
         {labelName}
       </label>
